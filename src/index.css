@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 font-sans antialiased;
+    /* Removed fixed gradients. We want a clean, "paper" feel. */
+  }
+}
+
+@layer components {
+  /* 
+   * The "Clean Card" Utility
+   * Replaces glassmorphism with solid borders and subtle shadows.
+   */
+  .clean-card {
+    @apply bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+  
+  .btn-primary {
+    @apply bg-brand-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-brand-700 transition-colors focus:ring-2 focus:ring-brand-500 focus:ring-offset-1;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-slate-700 border border-slate-200 px-4 py-2 rounded-lg font-medium hover:bg-slate-50 transition-colors;
+  }
+}
