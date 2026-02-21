@@ -124,7 +124,7 @@ const SummaryModal = ({ isOpen, onClose, article }) => {
                         flex items-center gap-2 px-8 py-3 rounded-lg font-semibold transition-all border
                         ${isPlaying
                                                     ? 'bg-red-50 text-red-600 border-red-200 hover:bg-red-100'
-                                                    : 'bg-indigo-600 text-white border-indigo-700 hover:bg-indigo-700 shadow-none'}
+                                                    : 'bg-brand-600 text-white border-brand-700 hover:bg-brand-700 shadow-none'}
                       `}
                                         >
                                             {isPlaying ? (
