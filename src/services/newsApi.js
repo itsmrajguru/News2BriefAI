@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
-const BASE_URL = 'https://newsapi.org/v2';
+// Points to the secure serverless backend proxy, avoiding CORS entirely
+const PROXY_URL = '/.netlify/functions/fetchNews';
 
 /**
  * MOCK DATA
@@ -35,24 +35,24 @@ const MOCK_ARTICLES = [
 ];
 
 // Fetch Top Headlines based on category
+// Fetch Top Headlines based on category
 export const fetchTopHeadlines = async (category = 'general') => {
-    if (!API_KEY) {
-        console.warn("Missing API Key. Using mock data.");
-        return MOCK_ARTICLES;
-    }
-
     try {
-        const response = await axios.get(`${BASE_URL}/top-headlines`, {
+        const response = await axios.get(PROXY_URL, {
             params: {
-                country: 'us',
                 category,
-                apiKey: API_KEY,
             },
         });
+
+        if (!response.data || !response.data.articles) {
+            console.warn("Proxy returned invalid data structure. Falling back to mock.");
+            return MOCK_ARTICLES;
+        }
+
         return response.data.articles;
     } catch (error) {
-        console.error("Fetch failed:", error);
-        // Return mock data if API fails
+        console.error("Secure fetch through proxy failed:", error);
+        // Safely return mock data if the API fails, ensuring the site never crashes
         return MOCK_ARTICLES;
     }
 };
