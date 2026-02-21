@@ -77,7 +77,7 @@ const Home = () => {
                     </div>
                 ) : (
                     <>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {articles.slice(0, visibleCount).map((article, index) => (
                                 <NewsCard
                                     key={`${article.url}-${index}`}
@@ -92,9 +92,9 @@ const Home = () => {
                             <div className="flex justify-center mt-12">
                                 <button
                                     onClick={handleLoadMore}
-                                    className="px-8 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-lg transition-all shadow-sm active:scale-95"
+                                    className="px-8 py-3 bg-white border border-slate-200 hover:bg-slate-50 text-slate-600 font-semibold rounded-xl transition-all shadow-none active:scale-95"
                                 >
-                                    Load More !
+                                    Load More
                                 </button>
                             </div>
                         )}

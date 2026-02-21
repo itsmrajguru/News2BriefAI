@@ -51,7 +51,7 @@ const NewsDetail = () => {
 
             {/* Featured Image */}
             {article.urlToImage && (
-                <div className="rounded-xl overflow-hidden mb-10 shadow-lg border border-slate-200">
+                <div className="rounded-xl overflow-hidden mb-10 border border-slate-200">
                     <img
                         src={article.urlToImage}
                         alt={article.title}
@@ -83,7 +83,7 @@ const NewsDetail = () => {
                     href={article.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-brand-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-brand-700 transition-colors shadow-sm hover:shadow active:scale-95"
+                    className="inline-flex items-center gap-2 btn-primary"
                 >
                     Visit {article.source.name} <ExternalLink className="w-4 h-4" />
                 </a>

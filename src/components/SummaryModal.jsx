@@ -79,12 +79,12 @@ const SummaryModal = ({ isOpen, onClose, article }) => {
     return (
         <AnimatePresence>
             {isOpen && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-sm">
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.95 }}
-                        className="bg-white w-full max-w-lg rounded-xl shadow-2xl relative overflow-hidden border border-slate-200"
+                        className="bg-white w-full max-w-lg rounded-xl relative overflow-hidden border border-slate-200"
                     >
                         {/* Header */}
                         <div className="flex items-center justify-between p-6 border-b border-slate-100 bg-slate-50/50">
@@ -121,10 +121,10 @@ const SummaryModal = ({ isOpen, onClose, article }) => {
                                         <button
                                             onClick={handleSpeak}
                                             className={`
-                        flex items-center gap-2 px-8 py-3 rounded-lg font-semibold transition-all shadow-sm
+                        flex items-center gap-2 px-8 py-3 rounded-lg font-semibold transition-all border
                         ${isPlaying
-                                                    ? 'bg-red-50 text-red-600 border border-red-200 hover:bg-red-100'
-                                                    : 'bg-brand-600 text-white hover:bg-brand-700 shadow-brand-500/20'}
+                                                    ? 'bg-red-50 text-red-600 border-red-200 hover:bg-red-100'
+                                                    : 'bg-brand-600 text-white border-brand-700 hover:bg-brand-700 shadow-none'}
                       `}
                                         >
                                             {isPlaying ? (

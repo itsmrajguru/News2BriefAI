@@ -31,7 +31,7 @@ const Hero = ({ activeCategory, onCategoryChange }) => {
             <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="bg-white border border-slate-200 rounded-2xl p-8 md:p-12 text-center shadow-sm max-w-4xl mx-auto"
+                className="bg-white border border-slate-200 rounded-3xl p-8 md:p-12 text-center shadow-none max-w-4xl mx-auto"
             >
                 <div className="flex justify-center mb-6">
                     <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-xs font-semibold uppercase tracking-wide">

@@ -10,7 +10,10 @@ const NewsCard = ({ article, onSummarize }) => {
     const title = article?.title || "No Title Available";
     const source = article?.source?.name || "Unknown Source";
     const date = article?.publishedAt ? format(new Date(article.publishedAt), 'MMM dd, yyyy') : "Today";
-    const image = article?.urlToImage || "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80";
+    let image = article?.urlToImage || "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80";
+    if (image.startsWith('http://')) {
+        image = image.replace('http://', 'https://');
+    }
     const url = article?.url || "#";
 
     const navigate = useNavigate();

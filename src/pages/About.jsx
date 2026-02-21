@@ -46,7 +46,7 @@ const About = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 + 0.2 }}
-                        className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow text-center group"
+                        className="bg-white p-8 rounded-2xl border border-slate-200 transition-colors text-center group"
                     >
                         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-brand-50 mb-6 group-hover:bg-brand-100 transition-colors">
                             {feature.icon}
