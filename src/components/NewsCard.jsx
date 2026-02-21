@@ -10,7 +10,7 @@ const NewsCard = ({ article, onSummarize }) => {
     const title = article?.title || "No Title Available";
     const source = article?.source?.name || "Unknown Source";
     const date = article?.publishedAt ? format(new Date(article.publishedAt), 'MMM dd, yyyy') : "Today";
-    let image = article?.urlToImage || "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=80";
+    let image = article?.urlToImage || "https://picsum.photos/seed/news/800/600";
     if (image.startsWith('http://')) {
         image = image.replace('http://', 'https://');
     }
@@ -35,6 +35,7 @@ const NewsCard = ({ article, onSummarize }) => {
                     src={image}
                     alt={title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    onError={(e) => { e.target.src = "https://placehold.co/800x600/f8fafc/0f172a?text=No+Image+Available" }}
                 />
                 <div className="absolute top-3 left-3">
                     <span className="px-2.5 py-1 bg-white/90 backdrop-blur-sm shadow-sm rounded-md text-xs font-semibold text-slate-700 tracking-wide">

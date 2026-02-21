@@ -12,7 +12,7 @@ const MOCK_ARTICLES = [
         title: "OpenAI Announces GPT-5 with Human-Level Reasoning",
         source: { name: "TechCrunch" },
         publishedAt: new Date().toISOString(),
-        urlToImage: "https://images.unsplash.com/photo-1677442135703-1767ca454554?auto=format&fit=crop&w=1000&q=80",
+        urlToImage: "https://picsum.photos/seed/ai/800/600",
         url: "#",
         description: "The new model promises a paradigm shift in AI capabilities..."
     },
@@ -20,7 +20,7 @@ const MOCK_ARTICLES = [
         title: "SpaceX Starship Successfully Reaches Orbit",
         source: { name: "SpaceNews" },
         publishedAt: new Date().toISOString(),
-        urlToImage: "https://images.unsplash.com/photo-1541872703-74c5963631df?auto=format&fit=crop&w=1000&q=80",
+        urlToImage: "https://picsum.photos/seed/space/800/600",
         url: "#",
         description: "After several attempts, the massive rocket has achieved orbit..."
     },
@@ -28,7 +28,7 @@ const MOCK_ARTICLES = [
         title: "Global Markets Rally as Inflation Cools Down",
         source: { name: "Bloomberg" },
         publishedAt: new Date().toISOString(),
-        urlToImage: "https://images.unsplash.com/photo-1611974765270-ca12588265b6?auto=format&fit=crop&w=1000&q=80",
+        urlToImage: "https://picsum.photos/seed/market/800/600",
         url: "#",
         description: "Stocks hit record highs as economic data shows promising signs..."
     }
